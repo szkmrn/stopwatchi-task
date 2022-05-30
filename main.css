@@ -1,0 +1,14 @@
+#display{
+    font-size:40px;
+    margin:20px;
+}
+span{
+    font-size:20px;
+    padding:0px 5px;
+}
+#buttons{
+    margin-left:20px;
+}
+#start,#stop,#reset{
+    padding:10px;
+}
