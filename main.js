@@ -34,23 +34,27 @@ document.getElementById("reset").disabled = true;
 
 start.addEventListener("click",function(){
     let interval = setInterval(stopwatchDisplay,100);
-        document.getElementById("start").disabled = true;
-        document.getElementById("stop").disabled = false;
-        document.getElementById("reset").disabled = false;
-    stop.addEventListener("click",function(){
-        clearInterval(interval);
-        document.getElementById("start").disabled = false;
-        document.getElementById("stop").disabled = true;
-        document.getElementById("reset").disabled = false;
-    });
-    reset.addEventListener("click",function(){
-        clearInterval(interval);
-        display.innerHTML = "0<span style='font-size:20px'>:</span>0<span style='font-size:20px'>:</span>0<span style='font-size:20px'>:</span>0";
-        document.getElementById("start").disabled = false;
-        document.getElementById("stop").disabled = true;
-        document.getElementById("reset").disabled = true;
-    });
-　},false);
+    document.getElementById("start").disabled = true;
+    document.getElementById("stop").disabled = false;
+    document.getElementById("reset").disabled = false;
+        stop.addEventListener("click",function(){
+            clearInterval(interval);
+            document.getElementById("start").disabled = false;
+            document.getElementById("stop").disabled = true;
+            document.getElementById("reset").disabled = false;
+        });
+        reset.addEventListener("click",function(){
+            clearInterval(interval);
+            display.innerHTML = "0<span style='font-size:20px'>:</span>0<span style='font-size:20px'>:</span>0<span style='font-size:20px'>:</span>0";
+            document.getElementById("start").disabled = false;
+            document.getElementById("stop").disabled = true;
+            document.getElementById("reset").disabled = true;
+            hour = 0;
+            minutes = 0;
+            seconds = 0;
+            millisecond = 0;
+        });
+},false);
  
   
   
